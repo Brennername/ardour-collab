@@ -23,6 +23,8 @@ Eventually I plan to add an interface that looks much like Ardour so you can use
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+You will also need to run `node server.js` which will start the Express backend on port 3000.
+
 # Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
