@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OscService } from '../../services/osc.service';
+import { OscService } from '../../../services/osc.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
