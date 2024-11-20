@@ -1,0 +1,13 @@
+<div *ngIf="data">
+  <h2>Parsed Data</h2>
+  <ul>
+    <ul *ngFor="let item of data | keyvalue">
+      <li>{{ item.key }}: {{ item.value }}</li>
+    </ul>
+  </ul>
+</div>
+<p></p>
+
+
+<input type="text" [(ngModel)]="oscCommand" placeholder="Enter OSC command">
+<button (click)="sendOscCommand()">Send</button>
