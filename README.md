@@ -7,7 +7,7 @@ Currently the only functionality is a simple wrapper around the oscsend utility 
 # Sending commands
 The simple CLI control allows you to send commands straight to Ardour.
 
-You will, of course, have to go into preferences->control surfaces to enable OSC. Read the howto on 
+You will, of course, have to go into preferences->control surfaces to enable OSC. Read the howto on manual.ardour.org.
 
 Try /transport_play and /transport_stop
 
