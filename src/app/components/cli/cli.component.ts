@@ -20,7 +20,7 @@ export class CliComponent {
     console.log("got here 1: " + this.oscCommand);
     const sanitizedCommand = this.sanitizeInput(this.oscCommand);
 
-    this.http.post('http://localhost:3000/send-osc-command', { oscCommand: sanitizedCommand })
+    this.http.post('http://127.0.0.1:3000/send-osc-command', { oscCommand: sanitizedCommand })
       .subscribe(
         response => { console.log(response); this.data = response; },
         error => console.error(error)

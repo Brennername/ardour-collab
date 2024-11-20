@@ -7,6 +7,8 @@ Currently the only functionality is a simple wrapper around the oscsend utility 
 # Sending commands
 The simple CLI control allows you to send commands straight to Ardour.
 
+You will, of course, have to go into preferences->control surfaces to enable OSC. Read the howto on 
+
 Try /transport_play and /transport_stop
 
 This is development code, if you weren't sent here then you probably don't need it.
@@ -23,7 +25,7 @@ Eventually I plan to add an interface that looks much like Ardour so you can use
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-You will also need to run `node server.js` which will start the Express backend on port 3000.
+You will also need to run `node server.cjs` which will start the Express backend on port 3000.
 
 # Code scaffolding
 
