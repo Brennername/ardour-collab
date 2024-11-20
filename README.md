@@ -4,6 +4,13 @@ Ardour Collab is an Angular application which uses a node Express backend to exp
 
 Currently the only functionality is a simple wrapper around the oscsend utility with a sanitizer for whatever you choose to do with it.
 
+Dependencies: oscsend, angular, express, node, npm, etc
+
+# oscsend
+If you are running Ubuntu Studio, you can use apt install oscsend, probably with sudo.
+
+Anything else, you're on your own. Open a PR if you want.
+
 # Sending commands
 The simple CLI control allows you to send commands straight to Ardour.
 
