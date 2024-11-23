@@ -1,0 +1,14 @@
+img:hover
+{
+  background: radial-gradient(circle, #c76a00, #77777700);
+
+}
+img
+{
+  height: inherit;
+  width: inherit;
+}
+img:active
+{
+  background: radial-gradient(circle, #fffb00, #33333300 );
+}
