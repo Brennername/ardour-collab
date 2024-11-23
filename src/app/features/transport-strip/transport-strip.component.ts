@@ -21,6 +21,7 @@ constructor(private oscService: OscService) { }
 stratagemClickHandler(data: any) {
   this.oscService.setOscCommand(data.oscCommand);
   this.oscService.setData(data);
+  console.log("Sending command: " + data.oscCommand);
   this.oscService.sendOscCommand();
 }
 
@@ -28,8 +29,7 @@ stratagemClickHandler(data: any) {
 playStratagem: Stratagem<{ oscCommand: string }> = {
   imageUrl: '/assets/image-buttons/default_play_button.png',
   onClick: () => {
-    console.log('Sending OSC command:', '/transport_play');
-    this.stratagemClickHandler(this.playStratagem.data);
+   this.stratagemClickHandler(this.playStratagem.data);
   },
   data: { oscCommand: '/transport_play'},
 

@@ -31,12 +31,12 @@ export class OscService {
 
 
   sendOscCommand() {
-    console.log("got here 1: " + this.oscCommand);
+    
     const sanitizedCommand = this.sanitizeInput(this.oscCommand);
 
     this.http.post('http://127.0.0.1:3000/send-osc-command', { oscCommand: sanitizedCommand })
       .subscribe(
-        response => { console.log(response + " Data: " + this.data); if (!this.data) { this.data = response; } },
+        response => {  if (!this.data) { this.data = response; } },
         error => console.error(error)
       );
   }
