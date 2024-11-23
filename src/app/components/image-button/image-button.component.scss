@@ -1,0 +1,18 @@
+img:hover
+{
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.514), #77777700);
+
+}
+img
+{
+  height: inherit;
+  width: inherit;
+  
+}
+img:active
+{
+  border: none;
+
+  filter: invert(1);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.521), #33333300 );
+}
