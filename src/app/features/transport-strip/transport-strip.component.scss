@@ -2,11 +2,13 @@
 {
   width: 20px;
   height: 20px;
+  padding: 2px;
 }
 .transport-strip-container
 {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  background: radial-gradient(circle, rgb(76, 96, 252), #fff);
+
 }

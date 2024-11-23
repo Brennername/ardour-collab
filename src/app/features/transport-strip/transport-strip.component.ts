@@ -17,26 +17,30 @@ export class TransportStripComponent {
 
 constructor(private oscService: OscService) { }
 
+
+stratagemClickHandler(data: any) {
+  this.oscService.setOscCommand(data.oscCommand);
+  this.oscService.setData(data);
+  this.oscService.sendOscCommand();
+}
+
+
 playStratagem: Stratagem<{ oscCommand: string }> = {
   imageUrl: '/assets/image-buttons/default_play_button.png',
   onClick: () => {
     console.log('Sending OSC command:', '/transport_play');
-    this.oscService.oscCommand = '/transport_play';
-    this.oscService.sendOscCommand();
+    this.stratagemClickHandler(this.playStratagem.data);
   },
-  data: { oscCommand: '/transport_play' },
+  data: { oscCommand: '/transport_play'},
 
 };
 
 stopStratagem: Stratagem<{ oscCommand: string }> = {
   imageUrl: '/assets/image-buttons/default_stop_button.png',
   onClick: () => {
-    console.log('Sending OSC command:', '/transport_stop');
-    this.oscService.oscCommand = '/transport_stop';
-    this.oscService.sendOscCommand();
+    this.stratagemClickHandler(this.stopStratagem.data);
   },
   data: { oscCommand: '/transport_stop' },
-
 };
 stratagem: any;
 
