@@ -6,18 +6,37 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OscService {
 
-  oscCommand = '';
+  oscCommand: string = '';
   data: any;
-  
+
   constructor(private http: HttpClient) { }
 
+  // oscCommand accessor
+  getOscCommand(): string {
+    return this.oscCommand;
+  }
+  //oscCommand mutator
+  setOscCommand(oscCommand: string) {
+    this.oscCommand = oscCommand;
+  }
+
+  //data accessor
+  getData(): any {
+    return this.oscCommand;
+  }
+  //data mutator
+  setData(data: any) {
+    this.data = data;
+  }
+
+
   sendOscCommand() {
-    console.log("got here 1: " + this.oscCommand);
+    
     const sanitizedCommand = this.sanitizeInput(this.oscCommand);
 
     this.http.post('http://127.0.0.1:3000/send-osc-command', { oscCommand: sanitizedCommand })
       .subscribe(
-        response => { console.log(response); this.data = response; },
+        response => {  if (!this.data) { this.data = response; } },
         error => console.error(error)
       );
   }

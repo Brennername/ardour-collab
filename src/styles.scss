@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+  background-color: val(--bg-primary);
+  color: val(--text-primary);
+}
+:root {
+  --base-color: #007bff;
+  --text-primary: #fff;
+  --bg-primary: #2133d1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-color: #fff;
+    --text-primary: #000;
+    --bg-primary: #222;
+  }
+}
+
+// Parent button that all buttons inherit from
+.primary-button {
+  background-color: var(--base-color);
+  color: var(--text-primary);
+  border: 1px solid black;
+  padding: 5px 8px;
+  border-radius: 15px;
+  cursor: pointer;
+
+
+}
+.primary-button:hover
+{
+  filter: invert(1);
+}
+
+.center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size: 14px; // Smaller font size
+    --spacing: 8px; // Reduced spacing
+    --border-radius: 4px; // Smaller border radius
+  }
+
+  .primary-button {
+    padding: 8px 16px; // Reduced padding
+  }
+
+  .center-wrapper {
+    flex-direction: column; // Adjust layout for smaller screens
+  }
+}
+
